@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8 ULTRA',
             description: 'ساعة ذكية بشاشة كبيرة وإمكانيات رياضية متقدمة.',
             price: 320.00,
-            image: 'iimg1.jpg',
+            image: 'img1.jpg',
             category: 'watches'
         },
         {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'SP8 ULTRA MAX',
             description: 'ساعة رياضية فاخرة بمستشعرات دقيقة وعمر بطارية طويل.',
             price: 600.00,
-            image: 'iimg2.jpg',
+            image: 'img2.jpg',
             category: 'watches'
         },
         {
@@ -731,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
 
 
 
