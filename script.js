@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (A)',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 520.00,
-            image: 'imges2/image1.jpg',
+            image: 'image1.jpg',
             category: 'audio'
         },
         {
@@ -729,4 +729,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts('all');
     showSection('hero');
     updateNavLinkActiveState('hero-section');
+
 });
