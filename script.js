@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (B)',
             description: 'تصميم مريح ومقاومة للعرق، مثالية للرياضة.',
             price: 350.00,
-            image: 'imges2/image2.jpg',
+            image: 'image2.jpg',
             category: 'audio'
         },
         {
@@ -731,3 +731,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
