@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8 ULTRA',
             description: 'ساعة ذكية بشاشة كبيرة وإمكانيات رياضية متقدمة.',
             price: 320.00,
-            image: 'imges1/img1.jpg',
+            image: 'iimg1.jpg',
             category: 'watches'
         },
         {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'SP8 ULTRA MAX',
             description: 'ساعة رياضية فاخرة بمستشعرات دقيقة وعمر بطارية طويل.',
             price: 600.00,
-            image: 'imges1/img2.jpg',
+            image: 'iimg2.jpg',
             category: 'watches'
         },
         {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X10S',
             description: 'ساعة ذكية بتصميم عصري وأداء عالي.',
             price: 750.00,
-            image: 'imges1/img4.jpg',
+            image: 'img4.jpg',
             category: 'watches'
         },
         {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8+ ULTRA',
             description: 'إصدار مطور من الساعات الذكية مع مقاومة للماء.',
             price: 680.00,
-            image: 'imges1/img5.png',
+            image: 'img5.jpg',
             category: 'watches'
         },
         {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'ZT_MAX60',
             description: 'ساعة اقتصادية بجودة جيدة ومزايا تتبع اللياقة.',
             price: 480.00,
-            image: 'imges1/img6.jpg',
+            image: 'img6.jpg',
             category: 'watches'
         },
         {
@@ -731,5 +731,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
 
 
