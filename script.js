@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8+ ULTRA',
             description: 'إصدار مطور من الساعات الذكية مع مقاومة للماء.',
             price: 680.00,
-            image: 'img5.jpg',
+            image: 'img5.png',
             category: 'watches'
         },
         {
@@ -731,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
 
 
 
