@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (C)',
             description: 'جودة صوت ممتازة وميكروفون مدمج لإجراء المكالمات.',
             price: 520.00,
-            image: 'imges2/image3.jpg',
+            image: 'image3.jpg',
             category: 'audio'
         },
         {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (D)',
             description: 'صوت جهوري قوي وتوصيل مستقر عبر البلوتوث.',
             price: 420.00,
-            image: 'imges2/image4.jpg',
+            image: 'image4.jpg',
             category: 'audio'
         },
         {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (E)',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 420.00,
-            image: 'imges2/image5.jpg',
+            image: 'image5.jpg',
             category: 'audio'
         },
         {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (F)',
             description: 'سماعات صغيرة الحجم ومناسبة للاستخدام اليومي.',
             price: 300.00,
-            image: 'imges2/image6.jpg',
+            image: 'image6.jpg',
             category: 'audio'
         },
         {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (G)',
             description: 'سعر اقتصادي وأداء صوتي جيد.',
             price: 200.00,
-            image: 'imges2/image7.jpg',
+            image: 'image7.jpg',
             category: 'audio'
         },
         {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (H)',
             description: 'جودة صوت ممتازة ومريحة للاستخدام لفترات طويلة.',
             price: 380.00,
-            image: 'imges2/image8.jpg',
+            image: 'image8.jpg',
             category: 'audio'
         },
         {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'سماعات أذن بلوتوث (I)',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 500.00,
-            image: 'imges2/image9.jpg',
+            image: 'image9.jpg',
             category: 'audio'
         },
         {
@@ -731,4 +731,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
 
