@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر إكسسواراتي - للتسوق</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">إكسسواراتي</div>
+            
+            <nav class="nav-links">
+                <a href="#hero-section" class="nav-active">الرئيسية</a>
+                <a href="#menu-section">المنتجات</a>
+                <a href="#about-section">عنا</a>
+                <a href="#contact-section">تواصل معنا</a>
+            </nav>
+
+            <div class="nav-icons">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="الوضع الليلي">
+                    <i class="fas fa-moon"></i> 
+                </button>
+                <div class="cart-icon-container" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-section" class="section active-section">
+            <div class="container hero-content">
+                <h1>أحدث الإكسسوارات لأجهزتك الذكية</h1>
+                <p>ساعات ذكية، سماعات، شواحن وأدوات عصرية بجودة عالية وأسعار تنافسية.</p>
+                <a href="#menu-section" class="btn btn-primary scroll-to-menu">تصفح المنتجات الآن</a>
+            </div>
+        </section>
+
+        <section id="menu-section" class="section">
+            <div class="container">
+                <h2>منتجاتنا</h2>
+                
+                <div class="menu-categories" id="menu-categories">
+                    </div>
+
+                <div class="menu-items-grid" id="menu-items-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about-section" class="section">
+            <div class="container">
+                <h2>من نحن</h2>
+                <p>نحن "إكسسواراتي"، منصة متخصصة لتقديم أحدث وأجود إكسسوارات الهواتف الذكية والساعات الإلكترونية. هدفنا هو تزويد عملائنا بكل ما هو جديد وعصري بأفضل الأسعار وأسرع خدمة توصيل.</p>
+                <p>نولي أهمية كبيرة لرضا عملائنا ونسعى دائماً لتقديم تجربة تسوق ممتعة وموثوقة.</p>
+            </div>
+        </section>
+        
+        <section id="contact-section" class="section">
+            <div class="container">
+                <h2>تواصل معنا</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> العنوان: القاهرة، مصر</p>
+                    <p><i class="fas fa-phone"></i> الهاتف: 010xxxxxxxx</p>
+                    <p><i class="fas fa-envelope"></i> البريد الإلكتروني: info@accessories.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout-section" class="section">
+            <div class="container">
+                <h2>إتمام طلب الشراء</h2>
+                <div class="checkout-layout">
+                    
+                    <div class="checkout-form-container">
+                        <h3>بيانات الشحن</h3>
+                        <form id="checkout-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            
+                            <input type="hidden" id="cart-details-input" name="تفاصيل_الطلب">
+                            <input type="hidden" id="total-price-input" name="السعر_الإجمالي">
+
+                            <div class="form-group">
+                                <label for="customer-name">الاسم كاملاً:</label>
+                                <input type="text" id="customer-name" name="الاسم" required>
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customer-phone">رقم الهاتف الأساسي:</label>
+                                <input type="tel" id="customer-phone" name="الهاتف_الأساسي" required>
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customer-phone-alt">رقم هاتف آخر (اختياري):</label>
+                                <input type="tel" id="customer-phone-alt" name="هاتف_إضافي">
+                                <span class="error-message" id="phone-alt-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customer-address">العنوان بالتفصيل (المحافظة، المنطقة، الشارع، رقم المنزل):</label>
+                                <textarea id="customer-address" name="العنوان_التفصيلي" rows="4" required></textarea>
+                                <span class="error-message" id="address-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customer-email">البريد الإلكتروني (اختياري):</label>
+                                <input type="email" id="customer-email" name="البريد_الإلكتروني">
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customer-notes">ملاحظات إضافية (اختياري):</label>
+                                <textarea id="customer-notes" name="ملاحظات_إضافية" rows="2"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary checkout-submit-btn">تأكيد الطلب والدفع عند الاستلام</button>
+                        </form>
+                    </div>
+
+                    <div class="order-summary-mini-container">
+                        <h3>ملخص الطلب</h3>
+                        <div id="order-summary-mini">
+                            </div>
+                        <button class="btn btn-secondary btn-back-to-menu">العودة لتصفح المنتجات</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button id="close-cart-btn" aria-label="إغلاق السلة"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items-container" id="cart-items">
+            </div>
+        <div class="cart-total-footer">
+            <div class="total-line">
+                <span>الإجمالي:</span>
+                <span id="cart-total-price">0.00 جنيها</span>
+            </div>
+            <button id="checkout-btn" class="btn btn-primary">إتمام الطلب</button>
+        </div>
+    </aside>
+
+    <div id="order-confirmation-overlay" class="order-confirmation-overlay">
+        <div class="order-confirmation-box">
+            <i class="fas fa-check-circle check-icon"></i>
+            <h3>شكراً لطلبك!</h3>
+            <p>تم استلام طلبك بنجاح. سيتم التواصل معك لتأكيد البيانات في أقرب وقت.</p>
+            <button id="close-confirmation-btn" class="btn btn-primary">موافق</button>
+        </div>
+    </div>
+    
+    <div id="notification-container"></div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 إكسسواراتي. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
