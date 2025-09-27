@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-1',
-            name: 'سماعات أذن بلوتوث (A)',
+            name: 'oraimo',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 520.00,
             image: 'image1.jpg',
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-2',
-            name: 'سماعات أذن بلوتوث (B)',
+            name: 'soundcore',
             description: 'تصميم مريح ومقاومة للعرق، مثالية للرياضة.',
             price: 350.00,
             image: 'image2.jpg',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-3',
-            name: 'سماعات أذن بلوتوث (C)',
+            name: 'fome pro_4',
             description: 'جودة صوت ممتازة وميكروفون مدمج لإجراء المكالمات.',
             price: 520.00,
             image: 'image3.jpg',
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-4',
-            name: 'سماعات أذن بلوتوث (D)',
+            name: 'soundcore',
             description: 'صوت جهوري قوي وتوصيل مستقر عبر البلوتوث.',
             price: 420.00,
             image: 'image4.jpg',
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-5',
-            name: 'سماعات أذن بلوتوث (E)',
+            name: 'soundcore',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 420.00,
             image: 'image5.jpg',
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-6',
-            name: 'سماعات أذن بلوتوث (F)',
+            name: 'tune flex',
             description: 'سماعات صغيرة الحجم ومناسبة للاستخدام اليومي.',
             price: 300.00,
             image: 'image6.jpg',
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-7',
-            name: 'سماعات أذن بلوتوث (G)',
+            name: 'wireless 5.1',
             description: 'سعر اقتصادي وأداء صوتي جيد.',
             price: 200.00,
             image: 'image7.jpg',
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 'audio-9',
-            name: 'سماعات أذن بلوتوث (I)',
+            name: 'foomee audio',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 500.00,
             image: 'image9.jpg',
@@ -731,6 +731,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavLinkActiveState('hero-section');
 
 });
+
 
 
 
