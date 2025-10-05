@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener( 'DOMContentLoaded', () => {
     // --- بيانات المنتجات (تم تحديث فئة 'gadgets' لمنتجات أكثر جاذبية) ---
     const products = [
         {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8 ULTRA',
             description: 'ساعة ذكية بشاشة كبيرة وإمكانيات رياضية متقدمة.',
             price: 320.00,
-            image: 'img1.jpg',
+            image: 'imges1/img1.jpg',
             category: 'watches'
         },
         {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'SP8 ULTRA MAX',
             description: 'ساعة رياضية فاخرة بمستشعرات دقيقة وعمر بطارية طويل.',
             price: 600.00,
-            image: 'img2.jpg',
+            image: 'imges1/img2.jpg',
             category: 'watches'
         },
         {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X10S',
             description: 'ساعة ذكية بتصميم عصري وأداء عالي.',
             price: 750.00,
-            image: 'img4.jpg',
+            image: 'imges1/img4.jpg',
             category: 'watches'
         },
         {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'X8+ ULTRA',
             description: 'إصدار مطور من الساعات الذكية مع مقاومة للماء.',
             price: 680.00,
-            image: 'img5.png',
+            image: 'imges1/img5.png',
             category: 'watches'
         },
         {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'ZT_MAX60',
             description: 'ساعة اقتصادية بجودة جيدة ومزايا تتبع اللياقة.',
             price: 480.00,
-            image: 'img6.jpg',
+            image: 'imges1/img6.jpg',
             category: 'watches'
         },
         {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'oraimo',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 520.00,
-            image: 'image1.jpg',
+            image: 'imges2/image1.jpg',
             category: 'audio'
         },
         {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'soundcore',
             description: 'تصميم مريح ومقاومة للعرق، مثالية للرياضة.',
             price: 350.00,
-            image: 'image2.jpg',
+            image: 'imges2/image2.jpg',
             category: 'audio'
         },
         {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'fome pro_4',
             description: 'جودة صوت ممتازة وميكروفون مدمج لإجراء المكالمات.',
             price: 520.00,
-            image: 'image3.jpg',
+            image: 'imges2/image3.jpg',
             category: 'audio'
         },
         {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'soundcore',
             description: 'صوت جهوري قوي وتوصيل مستقر عبر البلوتوث.',
             price: 420.00,
-            image: 'image4.jpg',
+            image: 'imges2/image4.jpg',
             category: 'audio'
         },
         {
@@ -78,15 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'soundcore',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 420.00,
-            image: 'image5.jpg',
+            image: 'imges2/image5.jpg',
             category: 'audio'
         },
         {
             id: 'audio-6',
-            name: 'tune flex',
+            name: 'une flex',
             description: 'سماعات صغيرة الحجم ومناسبة للاستخدام اليومي.',
             price: 300.00,
-            image: 'image6.jpg',
+            image: 'imges2/image6.jpg',
             category: 'audio'
         },
         {
@@ -94,91 +94,106 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'wireless 5.1',
             description: 'سعر اقتصادي وأداء صوتي جيد.',
             price: 200.00,
-            image: 'image7.jpg',
+            image: 'imges2/image7.jpg',
             category: 'audio'
         },
         {
             id: 'audio-8',
-            name: 'سماعات أذن بلوتوث (H)',
+            name: 'stereo',
             description: 'جودة صوت ممتازة ومريحة للاستخدام لفترات طويلة.',
-            price: 380.00,
-            image: 'image8.jpg',
+            price: 70.00,
+            image: 'imges2/1.avif',
             category: 'audio'
         },
         {
             id: 'audio-9',
-            name: 'foomee audio',
+            name: 'hm',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
-            price: 500.00,
-            image: 'image9.jpg',
+            price: 50.00,
+            image: 'imges2/22.jpg',
             category: 'audio'
         },
         {
-            id: 'power-bank-1',
-            name: 'باور بانك 20000 مللي أمبير',
-            description: 'شاحن محمول فائق السرعة، يشحن هاتفك لعدة مرات.',
-            price: 250.00,
-            image: 'imges2/image1.jpg', 
-            category: 'chargers'
+            id: 'audio-9',
+            name: 'blue',
+            description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
+            price: 80.00,
+            image: 'imges2/33.png',
+            category: 'audio'
         },
         {
-            id: 'phone-case-1',
-            name: 'جراب حماية شفاف',
-            description: 'جراب نحيف ومرن، يحمي هاتفك من الصدمات والخدوش.',
-            price: 55.00,
-            image: 'imges1/img4.jpg', 
-            category: 'phone-accessories'
+            id: 'audio-9',
+            name: 'earphone',
+            description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
+            price: 80.00,
+            image: 'imges2/44.jpg',
+            category: 'audio'
         },
         {
-            id: 'car-charger-1',
-            name: 'شاحن سيارة سريع',
-            description: 'شاحن سيارة بمنفذين USB، يدعم الشحن السريع.',
-            price: 90.00,
-            image: 'imges2/image6.jpg', 
-            category: 'chargers'
+            id: 'audio-9',
+            name: ' strong',
+            description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
+            price: 500.00,
+            image: 'imges2/55.png',
+            category: 'audio'
+        },
+        {
+            id: 'audio-9',
+            name: 'سماعات أذن بلوتوث (I)',
+            description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
+            price: 500.00,
+            image: 'imges2/image9.jpg',
+            category: 'audio'
+        },
+        {
+            id: 'audio-9',
+            name: 'سماعات أذن بلوتوث (I)',
+            description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
+            price: 500.00,
+            image: 'imges2/image9.jpg',
+            category: 'audio'
         },
         {
             id: 'gadget-1',
-            name: 'إضاءة حلقية للتصوير (Ring Light)',
-            description: 'إضاءة احترافية بثلاثة ألوان قابلة للتعديل، مثالية للبث المباشر والفيديوهات.',
-            price: 180.00,
-            image: 'imges_gadgets/ringlight.jpg', 
+            name: 'Bot Music 1',
+            description: 'الحجم ومناسبة للاستخدام اليومي',
+            price: 250.00,
+            image: 'img3/2.jpg', 
             category: 'gadgets'
         }, 
         {
-            id: 'gadget-2',
-            name: 'حامل هاتف آلي دوار',
-            description: 'حامل ذكي يتتبع الحركة، مثالي لتصوير المحتوى دون الحاجة للمساعدة.',
-            price: 290.00,
-            image: 'imges_gadgets/autopod.jpg', 
+            id: 'gadget-1',
+            name: 'Bot Music 2',
+            description: 'الحجم ومناسبة للاستخدام اليومي',
+            price: 250.00,
+            image: 'img3/3.webp', 
             category: 'gadgets'
-        },
+        }, 
         {
-            id: 'gadget-3',
-            name: 'عدسة تكبير احترافية للهاتف',
-            description: 'عدسة زووم عالية الدقة 18X، لتحويل كاميرا هاتفك إلى كاميرا احترافية.',
-            price: 350.00,
-            image: 'imges_gadgets/zoomlens.jpg', 
+            id: 'gadget-1',
+            name: 'Bot Music 3',
+            description: 'الحجم ومناسبة للاستخدام اليومي',
+            price: 250.00,
+            image: 'img3/4.jpg', 
             category: 'gadgets'
-        },
+        }, 
         {
-            id: 'wireless-charger-1',
-            name: 'شاحن لاسلكي',
-            description: 'شاحن أنيق بتصميم دائري، يدعم أحدث تقنيات الشحن اللاسلكي.',
+            id: 'gadget-1',
+            name: 'Bot Music 4',
+            description: '',
+            price: 195.00,
+            image: 'img3/5.jpg', 
+            category: 'gadgets'
+        }, 
+        {
+            id: 'gadget-1',
+            name: 'Bot Music 5',
+            description: '',
             price: 180.00,
-            image: 'imges1/img2.jpg', 
-            category: 'chargers'
-        },
-        {
-            id: 'screen-protector-1',
-            name: 'واقي شاشة زجاجي',
-            description: 'طبقة حماية من الزجاج المقوى، تمنع الخدوش وتحمي الشاشة من الكسر.',
-            price: 45.00,
-            image: 'imges1/img1.jpg', 
-            category: 'phone-accessories'
-        }
+            image: 'img3/1.webp', 
+            category: 'gadgets'
+        }, 
     ];
-
     // --- عناصر DOM الرئيسية ---
     const sections = {
         hero: document.getElementById('hero-section'),
@@ -729,11 +744,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts('all');
     showSection('hero');
     updateNavLinkActiveState('hero-section');
-
 });
-
-
-
-
-
-
