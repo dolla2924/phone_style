@@ -114,7 +114,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'audio'
         },
         {
-            id: 'audio-10', // تم تغيير الـ ID لتجنب التكرار
+            id: 'audio-9',
             name: 'blue',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 80.00,
@@ -122,7 +122,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'audio'
         },
         {
-            id: 'audio-11', // تم تغيير الـ ID لتجنب التكرار
+            id: 'audio-9',
             name: 'earphone',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 80.00,
@@ -130,7 +130,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'audio'
         },
         {
-            id: 'audio-12', // تم تغيير الـ ID لتجنب التكرار
+            id: 'audio-9',
             name: ' strong',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 500.00,
@@ -138,7 +138,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'audio'
         },
         {
-            id: 'audio-13', // تم تغيير الـ ID لتجنب التكرار
+            id: 'audio-9',
             name: 'سماعات أذن بلوتوث (I)',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 500.00,
@@ -146,15 +146,15 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'audio'
         },
         {
-            id: 'audio-14', // تم تغيير الـ ID لتجنب التكرار
-            name: 'سماعات أذن بلوتوث (II)', // تغيير الاسم لتجنب التكرار
+            id: 'audio-9',
+            name: 'سماعات أذن بلوتوث (I)',
             description: 'صوت محيطي نقي، عمر بطارية طويل، وخاصية عزل الضوضاء.',
             price: 500.00,
             image: 'imges2/image9.jpg',
             category: 'audio'
         },
         {
-            id: 'gadget-1', // تم تغيير الـ ID لتجنب التكرار
+            id: 'gadget-1',
             name: 'Bot Music 1',
             description: 'الحجم ومناسبة للاستخدام اليومي',
             price: 250.00,
@@ -162,7 +162,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'gadgets'
         }, 
         {
-            id: 'gadget-2',
+            id: 'gadget-1',
             name: 'Bot Music 2',
             description: 'الحجم ومناسبة للاستخدام اليومي',
             price: 250.00,
@@ -170,7 +170,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'gadgets'
         }, 
         {
-            id: 'gadget-3',
+            id: 'gadget-1',
             name: 'Bot Music 3',
             description: 'الحجم ومناسبة للاستخدام اليومي',
             price: 250.00,
@@ -178,7 +178,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'gadgets'
         }, 
         {
-            id: 'gadget-4',
+            id: 'gadget-1',
             name: 'Bot Music 4',
             description: '',
             price: 195.00,
@@ -186,7 +186,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
             category: 'gadgets'
         }, 
         {
-            id: 'gadget-5',
+            id: 'gadget-1',
             name: 'Bot Music 5',
             description: '',
             price: 180.00,
@@ -256,7 +256,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
             targetSection.classList.add('active-section');
             if (sectionId !== 'hero' && !sections.cartSidebar.classList.contains('open')) {
                 setTimeout(() => {
-                    // التمرير إلى القسم المستهدف مع ترك مساحة لرأس الصفحة الثابت
                     window.scrollTo({
                         top: targetSection.offsetTop - 70, 
                         behavior: 'smooth'
@@ -297,9 +296,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
         cartItemsContainer.innerHTML = '';
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = '<p class="empty-cart-message">عربتك فارغة.</p>';
-            checkoutBtn.disabled = true;
         } else {
-            checkoutBtn.disabled = false;
             cart.forEach(item => {
                 const cartItemDiv = document.createElement('div');
                 cartItemDiv.classList.add('cart-item');
@@ -374,7 +371,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     // --- وظائف عرض المنتجات وتصفيتها ---
 
     function getUniqueCategories() {
-        // استخدام Set لضمان عدم تكرار الفئات
         const categories = new Set(products.map(p => p.category));
         return ['all', ...Array.from(categories)];
     }
@@ -440,13 +436,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
     function renderOrderSummaryMini() {
         if (cart.length === 0) {
             orderSummaryMini.innerHTML = '<p>عربتك فارغة. لا يمكن إتمام الطلب.</p>';
+            checkoutBtn.disabled = true;
             return;
         }
 
         let summaryHtml = '<h4>ملخص طلبك</h4><ul>';
         let total = 0;
-        let cartDetailsForForm = []; 
-
         cart.forEach(item => {
             const itemTotal = item.price * item.quantity;
             total += itemTotal;
@@ -456,18 +451,16 @@ document.addEventListener( 'DOMContentLoaded', () => {
                     <span>${itemTotal.toFixed(2)} جنيها</span>
                 </li>
             `;
-            cartDetailsForForm.push({
-                name: item.name,
-                quantity: item.quantity,
-                price: item.price,
-                total: itemTotal.toFixed(2)
-            });
         });
         summaryHtml += `</ul><div class="total"><span>الإجمالي:</span> <span>${total.toFixed(2)} جنيها</span></div>`;
         orderSummaryMini.innerHTML = summaryHtml;
-        
-        // تحديث الحقول المخفية لنموذج FormSubmit
-        cartDetailsInput.value = JSON.stringify(cartDetailsForForm);
+        checkoutBtn.disabled = false;
+
+        cartDetailsInput.value = JSON.stringify(cart.map(item => ({
+            name: item.name,
+            quantity: item.quantity,
+            price: item.price
+        })));
         totalPriceInput.value = total.toFixed(2);
     }
 
@@ -486,21 +479,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
         const addressError = document.getElementById('address-error');
         const emailError = document.getElementById('email-error');
 
-        // مسح رسائل الأخطاء السابقة وإزالة فئة الخطأ
         [nameError, phoneError, phoneAltError, addressError, emailError].forEach(el => el.textContent = '');
         [nameInput, phoneInput, phoneAltInput, addressTextarea, emailInput].forEach(el => el.classList.remove('error'));
 
-        // التحقق من الاسم
         if (nameInput.value.trim() === '') {
             nameError.textContent = 'الاسم مطلوب.';
             nameInput.classList.add('error');
             isValid = false;
         }
 
-        // نمط للتحقق من رقم الهاتف المصري (11 رقم يبدأ بـ 0)
         const phonePattern = /^0[0-9]{10}$/;
 
-        // التحقق من رقم الهاتف الأساسي
         if (phoneInput.value.trim() === '') {
             phoneError.textContent = 'رقم الهاتف مطلوب.';
             phoneInput.classList.add('error');
@@ -511,21 +500,18 @@ document.addEventListener( 'DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // التحقق من رقم هاتف آخر (إذا تم إدخاله)
         if (phoneAltInput.value.trim() !== '' && !phonePattern.test(phoneAltInput.value.trim())) {
             phoneAltError.textContent = 'الرجاء إدخال رقم هاتف صحيح (11 رقم يبدأ بـ 0).';
             phoneAltInput.classList.add('error');
             isValid = false;
         }
 
-        // التحقق من العنوان
         if (addressTextarea.value.trim() === '') {
             addressError.textContent = 'العنوان كاملاً مطلوب.';
             addressTextarea.classList.add('error');
             isValid = false;
         }
 
-        // التحقق من البريد الإلكتروني (إذا تم إدخاله)
         if (emailInput.value.trim() !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
             emailError.textContent = 'صيغة البريد الإلكتروني غير صحيحة.';
             emailInput.classList.add('error');
@@ -597,7 +583,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         } else if (savedTheme === 'light') {
             disableDarkMode();
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // تحقق من تفضيلات النظام
             enableDarkMode();
         } else {
             disableDarkMode();
@@ -618,37 +603,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
         });
     }
 
-    // معالجة النقر على روابط التنقل
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = e.target.getAttribute('href').substring(1);
-            // تحويل #hero-section إلى 'hero' ليناسب أسماء الأقسام في المتغير sections
-            const sectionName = targetId.replace('-section', ''); 
-
-            // معالجة خاصة لصفحة الدفع لضمان ظهورها فقط بالزر الخاص بها
-            if (sectionName !== 'checkout') {
-                showSection(sectionName);
-                updateNavLinkActiveState(targetId);
-            }
-            
-            // إخفاء قائمة التنقل في وضع الهاتف المحمول
+            const sectionName = targetId.replace('-section', '');
+            showSection(sectionName);
+            updateNavLinkActiveState(targetId);
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
             }
         });
     });
 
-    // زر "تصفح المنتجات الآن" في قسم البطل (Hero)
-    if (scrollToMenuBtn) {
-        scrollToMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            showSection('menu');
-            updateNavLinkActiveState('menu-section');
-        });
-    }
-
-    // فتح وإغلاق سلة التسوق الجانبية
     cartIcon.addEventListener('click', () => {
         sections.cartSidebar.classList.add('open');
         renderCartItems();
@@ -658,7 +625,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         sections.cartSidebar.classList.remove('open');
     });
 
-    // التحكم في الكمية وإزالة المنتجات داخل سلة التسوق
     cartItemsContainer.addEventListener('click', (e) => {
         const target = e.target;
         const button = target.closest('button');
@@ -673,7 +639,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         }
     });
 
-    // زر "أضف إلى السلة" في بطاقات المنتجات
     menuItemsGrid.addEventListener('click', (e) => {
         const target = e.target;
         if (target.classList.contains('add-to-cart-btn')) {
@@ -682,7 +647,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         }
     });
 
-    // أزرار تصفية الفئات
     menuCategoriesContainer.addEventListener('click', (e) => {
         const target = e.target;
         if (target.classList.contains('category-btn')) {
@@ -695,7 +659,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
         }
     });
 
-    // زر "إتمام الطلب" من السلة الجانبية
     checkoutBtn.addEventListener('click', () => {
         if (cart.length === 0) {
             showNotification('عربتك فارغة. لا يمكن إتمام الطلب.', 'error');
@@ -704,15 +667,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
         sections.cartSidebar.classList.remove('open');
         showSection('checkout');
         renderOrderSummaryMini();
-        // إعادة تعيين النموذج ومسح الأخطاء عند الانتقال إلى صفحة الدفع
         checkoutForm.reset();
         checkoutForm.querySelectorAll('.error-message').forEach(span => span.textContent = '');
         checkoutForm.querySelectorAll('input, textarea').forEach(input => input.classList.remove('error'));
-        // تحديث حالة شريط التنقل
-        updateNavLinkActiveState('checkout-section');
     });
 
-    // زر "العودة لتصفح المنتجات" من صفحة الدفع (الإصلاح هنا)
     if (backToMenuBtn) {
         backToMenuBtn.addEventListener('click', () => {
             showSection('menu');
@@ -720,81 +679,69 @@ document.addEventListener( 'DOMContentLoaded', () => {
         });
     }
 
-
-    // *** معالجة نموذج إتمام الطلب (Form Submission) - (تم استكمال هذا الجزء) ***
-    checkoutForm.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        
-        if (!validateForm()) {
-            showNotification('الرجاء مراجعة البيانات المدخلة.', 'error');
-            return;
-        }
-
-        if (cart.length === 0) {
-             showNotification('عربتك فارغة. لا يمكن إرسال الطلب.', 'error');
-             return;
-        }
-
-        // إرسال النموذج فعلياً (باستخدام FormSubmit في هذه الحالة)
-        const form = e.target;
-        const formData = new FormData(form);
-        const url = form.action;
-
-        // تعطيل الزر لمنع الإرسال المتعدد
-        const submitBtn = form.querySelector('.checkout-submit-btn');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'جاري الإرسال...';
-        
-        fetch(url, {
-            method: form.method,
-            body: formData,
-            // Header is necessary for FormSubmit to work without redirecting
-            headers: {
-                'Accept': 'application/json' 
-            }
-        })
-        .then(response => {
-            // FormSubmit returns 200 OK on success, even for asynchronous calls
-            if (response.ok) { 
-                // مسح السلة بعد الإرسال الناجح
-                cart = [];
-                saveCart();
-                updateCartCount();
-                renderCartItems(); 
-                
-                form.reset(); // مسح حقول النموذج
-                showOrderConfirmation();
-                showSection('hero'); // العودة للصفحة الرئيسية
-                updateNavLinkActiveState('hero-section');
-                
+    if (checkoutForm) {
+        checkoutForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (validateForm()) {
+                const cartDetailsForSubmit = cart.map(item => `${item.name} (x${item.quantity}) - ${item.price.toFixed(2)} جنيها`).join('\n');
+                cartDetailsInput.value = cartDetailsForSubmit;
+                totalPriceInput.value = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+                try {
+                    const formData = new FormData(checkoutForm);
+                    formData.append('تفاصيل الطلب', cartDetailsForSubmit);
+                    formData.append('السعر الإجمالي', totalPriceInput.value);
+                    const response = await fetch(checkoutForm.action, {
+                        method: checkoutForm.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    if (response.ok) {
+                        showOrderConfirmation();
+                        cart = [];
+                        saveCart();
+                        updateCartCount();
+                        renderCartItems();
+                        checkoutForm.reset();
+                        checkoutForm.querySelectorAll('.error-message').forEach(span => span.textContent = '');
+                        checkoutForm.querySelectorAll('input, textarea').forEach(input => input.classList.remove('error'));
+                    } else {
+                        const errorData = await response.json();
+                        console.error('FormSubmit error:', errorData);
+                        showNotification('حدث خطأ أثناء إرسال طلبك. الرجاء المحاولة مرة أخرى.', 'error');
+                    }
+                } catch (error) {
+                    console.error('Network or submission error:', error);
+                    showNotification('حدث خطأ في الشبكة أو الإرسال. الرجاء التحقق من اتصالك والمحاولة مرة أخرى.', 'error');
+                }
             } else {
-                // معالجة الأخطاء من FormSubmit (أو فشل الإرسال)
-                showNotification('حدث خطأ أثناء إرسال الطلب. تأكد من إعداد FormSubmit بشكل صحيح.', 'error');
+                showNotification('الرجاء تصحيح الأخطاء في النموذج.', 'error');
             }
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-            showNotification('فشل في الاتصال بالخادم. حاول مرة أخرى.', 'error');
-        })
-        .finally(() => {
-            // إعادة تفعيل الزر
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'تأكيد الطلب والدفع عند الاستلام';
         });
-    });
+    }
 
+    if (closeConfirmationBtn) {
+        closeConfirmationBtn.addEventListener('click', () => {
+            hideOrderConfirmation();
+            showSection('hero');
+            updateNavLinkActiveState('hero-section');
+        });
+    }
 
-    // *** زر إغلاق شاشة التأكيد ***
-    closeConfirmationBtn.addEventListener('click', () => {
-        hideOrderConfirmation();
-    });
-    
+    if (scrollToMenuBtn) {
+        scrollToMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSection('menu');
+            updateNavLinkActiveState('menu-section');
+        });
+    }
 
-    // --- التهيئة عند التحميل ---
-    initializeTheme();
-    renderCategoryButtons();
-    renderProducts(); // عرض جميع المنتجات افتراضياً
+    // --- تهيئة الموقع عند التحميل ---
+    initializeTheme(); 
     updateCartCount();
-    renderCartItems(); // لضمان عرض عناصر السلة المخزنة إذا تم فتحها مباشرة
-
+    renderCategoryButtons();
+    renderProducts('all');
+    showSection('hero');
+    updateNavLinkActiveState('hero-section');
 });
