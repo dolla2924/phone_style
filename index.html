@@ -93,49 +93,51 @@
                     <div class="checkout-form-container">
                         <h3>بيانات الشحن</h3>
                         <form class="checkout-form" id="checkout-form"
-                            action="https://formsubmit.co/dwlalhwty@gmail.com" method="POST">
-
-                            <input type="hidden" id="cart-details-input" name="تفاصيل_الطلب">
-                            <input type="hidden" id="total-price-input" name="السعر_الإجمالي">
-
+                            action="https://formsubmit.co/dolla2924@gmail.com" method="POST">
                             <div class="form-group">
-                                <label for="customer-name">الاسم كاملاً:</label>
-                                <input type="text" id="customer-name" name="الاسم" required>
+                                <label for="customer-name">الاسم :</label>
+                                <input type="text" id="customer-name" name="customerName" required
+                                    placeholder="اكتب اسمك">
                                 <span class="error-message" id="name-error"></span>
                             </div>
-
                             <div class="form-group">
-                                <label for="customer-phone">رقم الهاتف الأساسي:</label>
-                                <input type="tel" id="customer-phone" name="الهاتف_الأساسي" required>
+                                <label for="customer-phone">رقم الهاتف:</label>
+                                <input type="tel" id="customer-phone" name="customerPhone" required pattern="[0-9]{11}"
+                                    placeholder="مثال: 01xxxxxxxx">
                                 <span class="error-message" id="phone-error"></span>
                             </div>
-
                             <div class="form-group">
                                 <label for="customer-phone-alt">رقم هاتف آخر (اختياري):</label>
-                                <input type="tel" id="customer-phone-alt" name="هاتف_إضافي">
+                                <input type="tel" id="customer-phone-alt" name="customerPhoneAlt" pattern="[0-9]{11}"
+                                    placeholder="مثال: 01xxxxxxxx">
                                 <span class="error-message" id="phone-alt-error"></span>
                             </div>
-
                             <div class="form-group">
-                                <label for="customer-address">العنوان بالتفصيل (المحافظة، المنطقة، الشارع، رقم
-                                    المنزل):</label>
-                                <textarea id="customer-address" name="العنوان_التفصيلي" rows="4" required></textarea>
+                                <label for="customer-address">العنوان كاملاً:</label>
+                                <textarea id="customer-address" name="customerAddress" rows="4" required
+                                    placeholder="مثال: الشارع، الحي، رقم المبنى، الدور، الشقة"></textarea>
                                 <span class="error-message" id="address-error"></span>
                             </div>
-
                             <div class="form-group">
                                 <label for="customer-email">البريد الإلكتروني (اختياري):</label>
-                                <input type="email" id="customer-email" name="البريد_الإلكتروني">ء
+                                <input type="email" id="customer-email" name="customerEmail"
+                                    placeholder="example@domain.com">
                                 <span class="error-message" id="email-error"></span>
                             </div>
-
                             <div class="form-group">
-                                <label for="customer-notes">ملاحظات إضافية (اختياري):</label>
-                                <textarea id="customer-notes" name="ملاحظات_إضافية" rows="2"></textarea>
+                                <label for="special-instructions">ملاحظات إضافية للطلب (اختياري):</label>
+                                <textarea id="special-instructions" name="specialInstructions" rows="3"
+                                    placeholder="مثال: بدون بصل، صوص إضافي..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary checkout-submit-btn">تأكيد الطلب والدفع عند
-                                الاستلام</button>
+                            <input type="hidden" name="_subject" value="طلب جديد من AS">
+                            <input type="hidden" name="cartDetails" id="cart-details-input">
+                            <input type="hidden" name="totalPrice" id="total-price-input">
+                            <input type="hidden" name="_captcha" value="false">
+                            <button type="submit" class="btn btn-primary submit-order-btn" id="submit-order-btn">تأكيد
+                                الطلب</button>
+                            <button type="button" class="btn btn-secondary btn-back-to-menu"
+                                style="margin-top: 15px;">العودة للقائمة</button>
                         </form>
                     </div>
 
